@@ -1,0 +1,22 @@
+#divSection {
+	width: 100%;
+	background-color: beige;
+	height: 660px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#divSection>div {
+	width: 80%;
+	padding-left: 4px;
+}
+
+#divSection>div>img {
+	height: 280px;
+	display: inline-block;
+}
+
+body {
+	width: 90%;
+}

@@ -1,0 +1,17 @@
+#divSectionMainSection {
+	width: 1000px;
+	background-color: beige;
+	height: 660px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#divSectionMainSection>div {
+	padding-left: 4px;
+}
+
+#divSectionMainSection>div>img {
+	/* height: 280px; */
+	display: inline-block;
+}

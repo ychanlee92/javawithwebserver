@@ -1,0 +1,187 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+String loginID = (String) session.getAttribute("loginID");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="website-main.css?after" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./chapter11/css/style.css" />
+<!-- <link rel="stylesheet" href="mainsection.css?after" /> -->
+<script src="website.main.js"></script>
+<script src="https://kit.fontawesome.com/a3088bf1ff.js"
+	crossorigin="anonymous" defer></script>
+<title>사랑스러운 고사양 홈페이지</title>
+</head>
+<body onload="call_js()">
+	<div>
+		<!-- 헤더 -->
+		<header>
+			<div id="divHeader">
+				<!-- 헤더 왼쪽 div -->
+				<div id="headerDiv">
+					<div>
+						<!-- 메인사진 -->
+						<a href="websitemain.jsp">
+							<div id="scrolldiv">
+								<script>
+									start();
+								</script>
+							</div>
+						</a>
+					</div>
+					<div>
+						<h1>
+							<a href="websitemain.jsp"> 고<span> 양이<br /></span>사<span>
+									진<br />
+							</span>양<span> 껏 즐겨요</span>
+							</a>
+						</h1>
+					</div>
+					<!-- 헤더 오른쪽 div -->
+					<div id="divHeaderRight">
+						<!-- 타사이트 앵커 -->
+						<a class="divHeaderRightA" href="websitemain.jsp"><b>Home</b></a>
+						<a class="divHeaderRightA"
+							href="https://search.naver.com/search.naver?ssc=tab.image.all&where=image&sm=tab_jum&query=%EA%B3%A0%EC%96%91%EC%9D%B4"
+							target="_blank"><b>Sitemap</b></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- 네브 -->
+		<nav>
+			<div id="divNav">
+				<div id="navDiv">
+					<!-- 네브 왼쪽 div -->
+					<div id="divNavLeft">
+						<ul>
+							<!-- 메뉴 -->
+							<li><a class="divNavLeftA" href="websitemain.jsp"><b>&nbsp;&nbsp;Home&nbsp;&nbsp;</b></a>
+							</li>
+							<li><a class="divNavLeftA" href="#"><b>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</b></a>
+							</li>
+							<li id="navMenu"><a class="divNavLeftA" href="#"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;게시판&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a>
+								<div id="menuDiv">
+									<a class="menuA" href="free-board.html" target="sectionIframe"><b>자유게시판</b></a>
+									<a class="menuA" href="#"><b>문의게시판</b></a> <a class="menuA1"
+										href="#"><b>건의게시판</b></a>
+								</div></li>
+							<li id="navMulti"><a class="divNavLeftA" href="#"><b>&nbsp;&nbsp;&nbsp;멀티미디어&nbsp;&nbsp;&nbsp;</b></a>
+								<div id="multiDiv">
+									<a class="multiA" href="#"><b>음악 듣기</b></a> <a class="multiA1"
+										href="#"><b>동영상 보기</b></a>
+								</div></li>
+							<li><a class="divNavLeftA" href="#"><b>&nbsp;&nbsp;상품
+										구매&nbsp;&nbsp;</b></a></li>
+							<li><a class="divNavLeftA" href="#"><b>&nbsp;&nbsp;찾아오시는
+										길&nbsp;&nbsp;</b></a></li>
+						</ul>
+					</div>
+					<!-- 네브 로그인 -->
+					<%
+					if (loginID != null) {
+						if (loginID.equals("admin")) {
+					%>
+					<div id="navLogin5">
+						<span id="navLogin2"><a class="divNavRightA" href=""><b>관리자</b></a></span><span
+							id="navLogin3"><a class="divNavRightA"
+							href="customerList.jsp"><b>회원삭제</b></a></span><span id="navLogin4"><a
+							class="divNavRightA" href="logout.jsp"><b>로그아웃</b></a></span>
+					</div>
+					<%
+					} else {
+					%>
+					<div id="navLogin5">
+						<span id="navLogin" class="divNavRightA"><b><%=loginID%>님
+								환영합니다.</b></span> <span id="navLogin2"><a class="divNavRightA"
+							href="modifyForm.jsp"><b>정보수정</b></a></span><span id="navLogin3"><a
+							class="divNavRightA" href="deleteForm.jsp"><b>회원탈퇴</b></a></span><span
+							id="navLogin4"><a class="divNavRightA" href="logout.jsp"><b>로그아웃</b></a></span>
+					</div>
+					<!-- 네브 오른쪽 div -->
+					<%
+					}
+					} else {
+					%>
+					<div id="divNavRight">
+						<!-- 로그인 & 회원가입 창 띄우기 -->
+						<a class="divNavRightA" onclick="loginJsp()"><b>로그인</b></a> <a
+							class="divNavRightA" onclick="loginWindow()"><b>회원가입</b></a>
+					</div>
+					<%
+					}
+					%>
+				</div>
+			</div>
+		</nav>
+		<!-- 섹션 -->
+		<section>
+			<div id="divSection">
+				<div id="sectionImage">
+					<div class="slideshow">
+						<div class="slideshow_slides">
+							<a
+								href="https://www.google.co.kr/search?q=%EC%A7%80%EA%B5%AC&sca_esv=260407b5166ebe05&sxsrf=ACQVn08-qCsQf0aoTIta8ar_I9kqygmEdQ%3A1714591838571&source=hp&ei=XpgyZpDWDoyw2roP362LgAU&iflsig=ANes7DEAAAAAZjKmbq41T4H1xVK7jLv9npq2YFJIQKaI&udm=&ved=0ahUKEwiQ_c-rmO2FAxUMmFYBHd_WAlAQ4dUDCBc&uact=5&oq=%EC%A7%80%EA%B5%AC&gs_lp=Egdnd3Mtd2l6Igbsp4DqtawyCxAuGIAEGLEDGIMBMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMgoQABiABBhDGIoFMgsQABiABBixAxiDATILEC4YgAQYsQMYgwEyCBAAGIAEGLEDMgsQLhiABBixAxiDATIIEC4YgAQYsQNIhAxQAFiwAnABeACQAQGYAXigAbgDqgEDMC40uAEDyAEA-AEBmAIDoALvAcICBBAuGAOYAwCSBwMxLjKgB9kr&sclient=gws-wiz"
+								target="_blank"><img src="./chapter11/img/slide-1.jpg"
+								alt="slide1" /></a> <a
+								href="https://www.google.co.kr/search?q=%ED%99%94%EC%84%B1%EB%A1%9C%EB%B4%87&sca_esv=260407b5166ebe05&sxsrf=ACQVn0_5sG-DYJjtEbvoiVGG5NZlQpGTCQ%3A1714591840816&ei=YJgyZsm0MYDc2roP9vWD2As&udm=&ved=0ahUKEwjJ5OysmO2FAxUArlYBHfb6ALsQ4dUDCBA&uact=5&oq=%ED%99%94%EC%84%B1%EB%A1%9C%EB%B4%87&gs_lp=Egxnd3Mtd2l6LXNlcnAiDO2ZlOyEseuhnOu0hzIFEAAYgAQyBRAAGIAEMgIQJjICECYyAhAmMgIQJjICECYyCBAAGIAEGKIESKcPUABY9w1wAngBkAECmAGIAaAB7gqqAQQwLjExuAEDyAEA-AEBmAIIoAKcBsICCxAAGIAEGLEDGIMBwgIEEAAYA8ICCxAuGIAEGLEDGIMBwgIIEAAYgAQYsQPCAggQLhiABBixA8ICChAAGIAEGEMYigXCAgUQLhiABMICERAuGIAEGMcBGJgFGJkFGK8BwgIUEC4YgAQYlwUY3AQY3gQY4ATYAQHCAgYQABgeGA-YAwC6BgYIARABGBSSBwMyLjagB9Vn&sclient=gws-wiz-serp"
+								target="_blank"><img src="./chapter11/img/slide-2.jpg"
+								alt="slide2" /></a> <a
+								href="https://www.google.co.kr/search?q=%EB%A1%9C%EC%BC%93%EB%B0%9C%EC%82%AC&sca_esv=260407b5166ebe05&sxsrf=ACQVn08_lfgtXqYWEBV5Dv75-a66-9wyOQ%3A1714591897338&ei=mZgyZt2RFOzl2roPlKuOSA&udm=&ved=0ahUKEwidwubHmO2FAxXsslYBHZSVAwkQ4dUDCBA&uact=5&oq=%EB%A1%9C%EC%BC%93%EB%B0%9C%EC%82%AC&gs_lp=Egxnd3Mtd2l6LXNlcnAiDOuhnOy8k-uwnOyCrDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARI-hVQmAVYyxRwBHgBkAEBmAGEAaABtQmqAQQwLjEwuAEDyAEA-AEBmAIJoAL4BMICChAAGLADGNYEGEfCAgsQABiABBixAxiDAcICCxAuGIAEGLEDGIMBwgIKEAAYgAQYQxiKBcICCBAAGIAEGLEDwgILEC4YgAQY0QMYxwGYAwCIBgGQBgqSBwM0LjWgB-VL&sclient=gws-wiz-serp"
+								target="_blank"><img src="./chapter11/img/slide-3.jpg"
+								alt="slide3" /></a> <a
+								href="https://www.google.co.kr/search?q=%EB%B9%84%ED%8F%AC%EC%84%A0%EB%9D%BC%EC%9D%B4%EC%A6%88&sca_esv=260407b5166ebe05&sxsrf=ACQVn08dcreD6KNqrETMzD3VuHMNqLLYuA%3A1714591978414&ei=6pgyZo7lGILX2roPgL6OiAI&udm=&gs_ssp=eJzj4tTP1TcwTklKjzdg9BJ6vbPlbf-aNy0LXs_d82buljfLOgDTABBW&oq=%EB%B9%84%ED%8F%AC%EC%84%A0&gs_lp=Egxnd3Mtd2l6LXNlcnAiCeu5hO2PrOyEoCoCCAAyCBAuGIAEGNQCMggQLhiABBjUAjIFEAAYgAQyBRAAGIAEMggQLhiABBjUAjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMhcQLhiABBjUAhiXBRjcBBjeBBjgBNgBAUj1HVAAWIwVcAN4AZABAZgBiwGgAd8JqgEEMC4xMLgBA8gBAPgBAZgCCqACmQfCAgsQABiABBixAxiDAcICCBAuGIAEGLEDwgILEC4YgAQYsQMYgwHCAgQQABgDwgIFEC4YgATCAgcQLhiABBgKwgIIEAAYgAQYogSYAwC6BgYIARABGBSSBwMzLjegB8-CAQ&sclient=gws-wiz-serp"
+								target="_blank"><img src="./chapter11/img/slide-4.jpg"
+								alt="slide4" /></a>
+						</div>
+						<div class="slideshow_nav">
+							<a class="prev" href=""><i
+								class="fa-solid fa-circle-chevron-left"></i></a> <a class="next"
+								href=""><i class="fa-solid fa-circle-chevron-right"></i></a>
+						</div>
+						<div class="indicator">
+							<a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+							<a href="#" class="passive"><i class="fa-solid fa-circle-dot"></i></a>
+							<a href="#" class="passive"><i class="fa-solid fa-circle-dot"></i></a>
+							<a href="#" class="passive"><i class="fa-solid fa-circle-dot"></i></a>
+						</div>
+					</div>
+				</div>
+				<div id="divIframe"></div>
+			</div>
+		</section>
+		<!-- 어사이드 -->
+		<aside>
+			<div>
+				<i id="uphide" class="fa-solid fa-up-long" onmouseover="disappear()"></i>
+			</div>
+		</aside>
+		<!-- 푸터 -->
+		<footer>
+			<!-- 푸터 메인 div -->
+			<div id="divFooter">
+				<div id="divFooter1">
+					<!-- 푸터 윗 div -->
+					<div id="divFooter2">
+						<a href="#"><b>다운로드</b></a> <a href="#"><b>개인정보처리방침</b> </a> <a
+							href="#"><b>저작권지침및신고</b></a> <a href="#" onclick="appear()"><b>이메일무단수집거부</b></a>
+					</div>
+				</div>
+				<!-- 푸터 아랫 div -->
+				<div id="divFooter3">
+					<div>
+						<span>왕십리 캠퍼스: 서울시 성동구 무학로2길 54 신방빌딜 4,5층 tel: 12-345-7890</span>
+					</div>
+					<div>
+						<span>Copytight c 2018 mrhi, Inc. ALl right reserved.
+							Contact webmaster for more information. 23-455-1234</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
