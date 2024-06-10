@@ -1,0 +1,113 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	height: 70px;
+	width: 20%;
+	border-right: 1px solid black;
+	background-color: rgb(224, 241, 255);
+}
+
+th, td {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	padding-left: 15px;
+	font-size: 15px;
+	width: 80%;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	margin-top: 20px;
+}
+.div1{
+   width: 60%;
+   margin: 0 auto;
+}
+#span1 {
+	font-size: 12px;
+}
+
+#userIdInfo {
+	font-size: 12px;
+	color: red;
+}
+
+#span2 {
+	font-size: 12px;
+}
+
+#userPwInfo {
+	font-size: 12px;
+	color: red;
+}
+
+#span3 {
+	font-size: 12px;
+}
+
+#userPwEqualInfo {
+	font-size: 12px;
+	color: red;
+}
+
+#span4 {
+	font-size: 12px;
+}
+
+#userNameInfo {
+	color: red;
+	font-size: 12px;
+}
+
+#userEmailCheckBox {
+	accent-color: red;
+}
+
+#userEmailInfo {
+	color: red;
+	font-size: 12px;
+}
+
+#userAddress {
+	margin: 2px 0;
+}
+
+#userAddressDetailed {
+	margin: 2px 0;
+}
+
+#userAddressExtra {
+	margin: 2px 0;
+}
+
+.span2 {
+	color: red;
+	font-size: 8px;
+	position: relative;
+	bottom: 3px;
+	right: 2px;
+}
+
+.span3 {
+	color: darkgray;
+	font-size: 7px;
+	position: relative;
+	bottom: 3px;
+	left: 2px;
+}
+
+.div3 {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}

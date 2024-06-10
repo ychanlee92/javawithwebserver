@@ -15,7 +15,7 @@ public class DBUtil {
 	// 데이터베이스 연결
 	public static Connection getConnection() throws FileNotFoundException, IOException {
 		// 오라클 데이터베이스 정보(주소, 유저, 패스워드)
-		String filePath = "D:/java17/JSPStudy/src/main/java/db.properties";
+		String filePath = "C:/Users/chan/OneDrive/바탕 화면/eclipse/java17/JSPStudy/src/main/java/db.properties";
 		Properties properties = new Properties();
 		properties.load(new FileReader(filePath));
 
@@ -27,9 +27,9 @@ public class DBUtil {
 			String password = properties.getProperty("password");
 			// oracle jdbc library class load
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-					System.out.println("jdbc driver load success");
+			System.out.println("jdbc driver load success");
 			con = DriverManager.getConnection(url, user, password);
-					System.out.println("database connection success");
+			System.out.println("database connection success");
 		} catch (ClassNotFoundException e) {
 			System.out.println("loading failure");
 			e.printStackTrace();

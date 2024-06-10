@@ -1,0 +1,71 @@
+#table1 {
+	width: 700px;
+}
+
+#td1 {
+	text-align: right;
+    background-color: pink;
+}
+#td1>a{
+    text-decoration: none;
+    color: darkblue;
+}
+#table2 {
+	width: 700px;
+	border: 1px solid black
+}
+
+#td2 {
+	text-align: center;
+}
+.tr1 {
+	height: 30;
+}
+
+.td4 {
+	text-align: center;
+	width: 50;
+}
+
+#td5 {
+	text-align: center;
+	width: 250;
+}
+
+.td6 {
+	text-align: center;
+	width: 100;
+}
+
+.td7 {
+	text-align: center;
+	width: 150;
+}
+
+#td8 {
+	text-align: center;
+	width: 50;
+}
+
+#td9 {
+	text-align: center;
+	width: 100;
+}
+
+#td10 {
+	text-align: center;
+	width: 100;
+}
+
+#td10 {
+	width: 250;
+}
+
+.img1 {
+	height: 16px;
+}
+
+#img1 {
+	height: 16px;
+	border: 0;
+}

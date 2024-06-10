@@ -1,15 +1,13 @@
 package memberone;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
+import controller.DBUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jdbc.DBPoolUtil;
 import mymemberone.UserInfoVO;
@@ -35,7 +33,7 @@ public class StudentDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			conn = DBPoolUtil.getConnection();
+			conn = DBUtil.getConnection();
 			pstmt = conn.prepareStatement("select * from userinfo where userid = ?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
@@ -43,6 +41,8 @@ public class StudentDAO {
 				result = false;
 			}
 			System.out.println(result);
+		} catch (IOException e) {
+			e.printStackTrace();
 		} catch (SQLException sqle) {
 			sqle.printStackTrace();
 		} finally {
