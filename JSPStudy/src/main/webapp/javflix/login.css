@@ -1,0 +1,72 @@
+h2{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+  }
+  form{
+   margin: 0 800px 50px 800px;
+  }
+  legend{
+   text-align: center;
+  }
+  #div1{
+   display: flex; flex-direction: column;
+  }
+  #userId2,#userPw2{
+    margin: 2px;
+  }
+  #loginbutton{
+    width: 120px;
+    height: 46px;
+    margin: 2px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+  }
+  #loginInfo{
+   font-size: 13px; color: red;
+  }
+  #div2{
+   margin: 0 0 5px 0;
+  }
+  #loginRemain{
+   accent-color: orange;
+  }
+  #label1{
+   font-size: 14px;
+  }
+  #loginSave{
+    accent-color: green;
+    font-size: 14px
+  }
+  #span1{
+    border: 1px solid rgb(143, 143, 143);
+    font-size: 13px;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  #span2{
+   color: red;
+  }
+  #div3{
+   margin-top: 10px;
+  }
+  #input1{
+   margin: 0 3px;
+  }
+  #button1{
+    background-color: gray;
+    color: white;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 2px;
+    padding: 2px 4px;
+    position: relative;
+    right: 6px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }

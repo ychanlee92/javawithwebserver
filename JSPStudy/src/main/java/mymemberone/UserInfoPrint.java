@@ -119,7 +119,7 @@ public class UserInfoPrint extends HttpServlet {
 			pw.println(0);
 		}
 		pw.println(" </table>");
-		pw.println("<p align=center> <a href=/JSPStudy/member/signup.html>회원가입으로 돌아가기</a></p>");
+		pw.println("<p align=center> <a href=/JSPStudy/javflix/signup.jsp>회원가입으로 돌아가기</a></p>");
 		pw.println(" </form>");
 		pw.println("</body>");
 		pw.println("</html>");

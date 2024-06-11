@@ -54,7 +54,7 @@ public class UserInfoInsert extends HttpServlet {
 			pstmt.setString(10, phone);
 			int value = pstmt.executeUpdate();
 			if (value == 1) {
-				response.sendRedirect("member/login.html");
+				response.sendRedirect("javflix/login.jsp");
 				System.out.println("성공");
 			}
 		} catch (Exception e) {

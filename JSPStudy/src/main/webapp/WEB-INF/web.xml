@@ -205,4 +205,19 @@
     <servlet-name>FileDownloadTest</servlet-name>
     <url-pattern>/FileDownloadTest</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ControllerServlet</display-name>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>model2.control.ControllerServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>propertyConfig</param-name>
+      <param-value>Command.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 </web-app>
