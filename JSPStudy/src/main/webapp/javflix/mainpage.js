@@ -472,5 +472,9 @@ function writeSave() {
 }
 
 function noAccess() {
+<<<<<<< HEAD
 	alert('Javflix 회원만 자유게시판 이용이 가능합니다. \n로그인이나 회원가입을 하시기 바랍니다.');
+=======
+	alert('고사양 회원만 자유게시판 이용이 가능합니다. \n로그인이나 회원가입을 하시기 바랍니다.');
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 }

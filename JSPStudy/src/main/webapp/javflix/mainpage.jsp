@@ -6,7 +6,11 @@ String loginID = (String) session.getAttribute("loginID");
 <html>
 <head>
 <link rel="stylesheet" href="mainpage.css?ver=2" />
+<<<<<<< HEAD
 <script src="mainpage.js?ver=2"></script>
+=======
+<script src="mainpage.js"></script>
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 <title>Jaflix</title>
 </head>
 <body onload="call_js()">
@@ -14,6 +18,10 @@ String loginID = (String) session.getAttribute("loginID");
 	<jsp:include page="nav.jsp"></jsp:include>
 	<section>
 		<jsp:include page="slide.jsp"></jsp:include>
+<<<<<<< HEAD
+=======
+		<span id="sectionSpan"><b>Javflix에 새로 올라온 콘텐츠</b></span>
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 		<div id="sectionOtt">
 			<div id="ottDiv">
 				<div class="ottSlide">

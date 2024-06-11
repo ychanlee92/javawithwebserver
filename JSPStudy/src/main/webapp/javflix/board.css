@@ -6,29 +6,42 @@
 	text-align: right;
     background-color: pink;
 }
+<<<<<<< HEAD
 a{
     text-decoration: none;
     color: rgb(58, 58, 58);
 }
 a:hover{
 	color: red;
+=======
+#td1>a{
+    text-decoration: none;
+    color: darkblue;
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 }
 #table2 {
 	width: 700px;
 	border: 1px solid black
 }
+<<<<<<< HEAD
 #table3 {
 	width: 700px;
 }
+=======
+
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 #td2 {
 	text-align: center;
 }
 .tr1 {
 	height: 30;
 }
+<<<<<<< HEAD
 .tr1>td {
 	background-color: ivory;
 }
+=======
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 
 .td4 {
 	text-align: center;
@@ -76,7 +89,11 @@ a:hover{
 #img1 {
 	height: 16px;
 	border: 0;
+<<<<<<< HEAD
 }
 #divBoard{
 	margin: 30px 0;
 }
+=======
+}
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b

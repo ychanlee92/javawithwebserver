@@ -16,10 +16,13 @@ String loginID = (String) session.getAttribute("loginID");
 			<a href="" id="navA" class="boardA">고객센터</a>
 			<div id="boardDiv">
 				<div id="boardHide">
+<<<<<<< HEAD
 					<%
 					if (loginID != null) {
 						if (loginID.equals("admin")) {
 					%>
+=======
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 					<div id="hideBoard">
 						<div>
 							<div class="boardHide" id="board1">
@@ -35,19 +38,34 @@ String loginID = (String) session.getAttribute("loginID");
 								<a href="">OTT프로젝트</a> <a href="">Javflix 비전</a> <a href="">OTT신청</a>
 							</div>
 							<div class="boardHide" id="board5">
+<<<<<<< HEAD
 								<a href="ottlist.jsp">OTT정보</a> <a href="board.jsp">OTT후기</a> <a
 									href=""></a>
+=======
+								<a href="">OTT정보</a> <a href="board.jsp">OTT후기</a> <a href=""></a>
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 							</div>
 							<div class="boardHide" id="board6">
 								<a href="">기술자문의원</a> <a href="">OTT특강</a> <a href="">실무자인터뷰</a>
 							</div>
+<<<<<<< HEAD
 							<div class="boardHide" id="board7">
 								<a href="">관리자모드</a> <a href="customerList.jsp">회원삭제</a> <a
 									href="logout.jsp">로그아웃</a>
+=======
+							<%
+							if (loginID != null) {
+								if (loginID.equals("admin")) {
+							%>
+							<div class="boardHide" id="board7">
+								<a href="login.jsp">관리자모드</a> <a href="signup.jsp">회원삭제</a> <a
+									href="">로그아웃</a>
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 							</div>
 							<%
 							} else {
 							%>
+<<<<<<< HEAD
 							<div id="hideBoard">
 								<div>
 									<div class="boardHide" id="board1">
@@ -115,4 +133,30 @@ String loginID = (String) session.getAttribute("loginID");
 							</div>
 						</div>
 					</div>
+=======
+							<div class="boardHide" id="board7">
+								<a href="login.jsp">개인정보수정</a> <a href="signup.jsp">계정탈퇴</a> <a
+									href="">로그아웃</a>
+							</div>
+							<%
+							}
+							} else {
+							%>
+							<div class="boardHide" id="board7">
+								<a href="login.jsp">로그인</a> <a href="signup.jsp">회원가입</a> <a
+									href="">건의게시판</a>
+							</div>
+							<%
+							}
+							%>
+							<div class="boardHide" id="board8">
+								<a href="">온라인 상담</a> <a href="">FAQ</a> <a href="">국비대상자 조회</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+>>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 </nav>
