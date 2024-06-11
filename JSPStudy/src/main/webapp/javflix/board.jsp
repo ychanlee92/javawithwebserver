@@ -32,11 +32,7 @@ number = count - (currentPage - 1) * pageSize;//수정<4>
 <html>
 <head>
 <link rel="stylesheet" href="mainpage.css?ver=2" />
-<<<<<<< HEAD
 <link rel="stylesheet" href="board.css?ver=1" />
-=======
-<link rel="stylesheet" href="board.css" />
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 <script src="mainpage.js"></script>
 <title>Jaflix</title>
 </head>
@@ -45,7 +41,6 @@ number = count - (currentPage - 1) * pageSize;//수정<4>
 	<jsp:include page="nav.jsp"></jsp:include>
 	<section>
 		<jsp:include page="slide.jsp"></jsp:include>
-<<<<<<< HEAD
 		<div id="divBoard">
 			<center>
 				<b>글목록(전체 글:<%=count%>)
@@ -81,67 +76,21 @@ number = count - (currentPage - 1) * pageSize;//수정<4>
 						<td class="td6"><%=number--%></td>
 						<td id="td11">
 							<!-- 수정 <5> --> <%
-=======
-		<center>
-			<b>글목록(전체 글:<%=count%>)
-			</b>
-			<table id="table1">
-				<tr>
-					<td id="td1"><a href="writeForm.jsp">글쓰기</a></td>
-			</table>
-			<%
-			if (count == 0) {
-			%>
-			<table id="table2">
-				<tr>
-					<td id="td2">게시판에 저장된 글이 없습니다.</td>
-			</table>
-			<%
-			} else {
-			%>
-			<table id="td3">
-				<tr class="tr1">
-					<td class="td4">번 호</td>
-					<td id="td5">제 목</td>
-					<td class="td6">작성자</td>
-					<td class="td7">작성일</td>
-					<td class="td4">조 회</td>
-					<td class="td6">IP</td>
-				</tr>
-				<%
-				for (int i = 0; i < articleList.size(); i++) {
-					BoardVO article = (BoardVO) articleList.get(i);
-				%>
-				<tr class="tr1">
-					<td class="td6"><%=number--%></td>
-					<td id="td11">
-						<!-- 수정 <5> --> <%
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
  int wid = 0;
  if (article.getDepth() > 0) {
  	wid = 5 * (article.getDepth());
  %> <img src="images/level.gif" width="<%=wid%>" class="img1"> <img
-<<<<<<< HEAD
 							src="images/re.gif"> <%
-=======
-						src="images/re.gif"> <%
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
  } else {
  %> <img src="images/level.gif" width="<%=wid%>"> <%
  }
  %> <a
-<<<<<<< HEAD
 							href="content.jsp?num=<%=article.getNum()%>&pageNum=<%=currentPage%>">
 								<!-- 수정<6> --> <%=article.getSubject()%></a> <%
-=======
-						href="content.jsp?num=<%=article.getNum()%>&pageNum=<%=currentPage%>">
-							<!-- 수정<6> --> <%=article.getSubject()%></a> <%
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
  if (article.getReadcount() >= 20) {
  %> <img src="images/hot.gif" id="img1"> <%
  }
  %>
-<<<<<<< HEAD
 						</td>
 						<td class="td6"><a href="mailto:<%=article.getEmail()%>">
 								<%=article.getWriter()%></a></td>
@@ -186,51 +135,6 @@ number = count - (currentPage - 1) * pageSize;//수정<4>
 				%>
 			</center>
 		</div>
-=======
-					</td>
-					<td class="td6"><a href="mailto:<%=article.getEmail()%>">
-							<%=article.getWriter()%></a></td>
-					<td class="td7"><%=sdf.format(article.getRegdate())%></td>
-					<td class="td4"><%=article.getReadcount()%></td>
-					<td class="td6"><%=article.getIp()%></td>
-				</tr>
-				<%
-				}
-				%>
-			</table>
-			<%
-			}
-			%>
-			<!-- 수정 <7> -->
-			<%
-			if (count > 0) {
-				int pageBlock = 5;
-				int imsi = count % pageSize == 0 ? 0 : 1;
-				int pageCount = count / pageSize + imsi;
-				int startPage = (int) ((currentPage - 1) / pageBlock) * pageBlock + 1;
-				int endPage = startPage + pageBlock - 1;
-				if (endPage > pageCount)
-					endPage = pageCount;
-				if (startPage > pageBlock) {
-			%>
-			<a href="list.jsp?pageNum=<%=startPage - pageBlock%>">[이전]</a>
-			<%
-			}
-			for (int i = startPage; i <= endPage; i++) {
-			%>
-			<a href="list.jsp?pageNum=<%=i%>">[<%=i%>]
-			</a>
-			<%
-			}
-			if (endPage < pageCount) {
-			%>
-			<a href="list.jsp?pageNum=<%=startPage + pageBlock%>">[다음]</a>
-			<%
-			}
-			}
-			%>
-		</center>
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 	</section>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

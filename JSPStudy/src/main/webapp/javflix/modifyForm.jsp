@@ -98,11 +98,7 @@ String phone2 = vo.getPhone().substring(3, 7);
 String phone3 = vo.getPhone().substring(7, 11);
 %>
 <body>
-<<<<<<< HEAD
 	<h1>개인정보 수정</h1>
-=======
-	<h1>고사양 개인정보 수정</h1>
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 	<div class="div1">
 		<span class="span1"><span class="span2">●</span> 개인 정보 수정</span>
 		<div class="div2">

@@ -105,11 +105,7 @@ String loginID = (String) session.getAttribute("loginID");
 					</tr>
 				</table>
 				<div class="div3">
-<<<<<<< HEAD
 					<button  type="submit">다음</button>
-=======
-					<button onclick="allCheck(event)" type="button">다음</button>
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 				</div>
 			</form>
 		</div>

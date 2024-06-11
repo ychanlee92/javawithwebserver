@@ -23,7 +23,6 @@ try (Connection con = DBPoolUtil.getConnection();
 th {
 	width: 50px;
 }
-<<<<<<< HEAD
 td{
 height:50px;}
 #address {
@@ -46,11 +45,6 @@ height:50px;}
 }
 #delete {
 	width: 100px;
-=======
-
-.address {
-	width: 1000px;
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 }
 </style>
 
@@ -61,7 +55,6 @@ height:50px;}
 	<section>
 		<jsp:include page="slide.jsp"></jsp:include>
 		<form action="customerListProc.jsp" method="post">
-<<<<<<< HEAD
 			<table align="center" width="1200" border="1">
 				<tr>
 					<th id="number">번호</th>
@@ -74,20 +67,6 @@ height:50px;}
 					<th>전화번호</th>
 					<th id="userDate">등록일</th>
 					<th id="delete">삭제</th>
-=======
-			<table align="center" width="1000" border="1">
-				<tr>
-					<th>번호</th>
-					<th>아이디</th>
-					<th>비밀번호</th>
-					<th>이름</th>
-					<th>이메일</th>
-					<th>우편번호</th>
-					<th id="address">주소</th>
-					<th>전화번호</th>
-					<th>등록일</th>
-					<th>삭제</th>
->>>>>>> cd82f262a6b8c0d44d6ec55264fc49078f71d56b
 				</tr>
 				<%
 				while (rs.next()) {
