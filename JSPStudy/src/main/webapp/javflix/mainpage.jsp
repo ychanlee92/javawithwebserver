@@ -7,7 +7,7 @@ String loginID = (String) session.getAttribute("loginID");
 <head>
 <link rel="stylesheet" href="mainpage.css?ver=2" />
 <script src="mainpage.js?ver=2"></script>
-<title>Jaflix</title>
+<title>Javflix</title>
 </head>
 <body onload="call_js()">
 	<jsp:include page="header.jsp"></jsp:include>
