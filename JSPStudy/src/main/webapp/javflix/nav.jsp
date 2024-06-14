@@ -5,9 +5,6 @@ String loginID = (String) session.getAttribute("loginID");
 %>
 <nav>
 	<div id="nav">
-		<div>
-			<a href=""></a>
-		</div>
 		<div id="navDiv">
 			<a href="" class="boardA">국비지원과정 </a> <a href="" class="boardA">Javflix소개</a>
 			<a href="" id="boardAA" class="boardA">취업지원센터</a> <a href=""
@@ -45,6 +42,9 @@ String loginID = (String) session.getAttribute("loginID");
 								<a href="">관리자모드</a> <a href="customerList.jsp">회원삭제</a> <a
 									href="logout.jsp">로그아웃</a>
 							</div>
+							<div class="boardHide" id="board8">
+								<a href="">온라인 상담</a> <a href="">FAQ</a> <a href="">국비대상자 조회</a>
+							</div>
 							<%
 							} else {
 							%>
@@ -73,6 +73,10 @@ String loginID = (String) session.getAttribute("loginID");
 										<a href="modifyForm.jsp">개인정보수정</a> <a
 											href="deleteUserForm.jsp">계정탈퇴</a> <a href="logout.jsp">로그아웃</a>
 									</div>
+									<div class="boardHide" id="board8">
+										<a href="">온라인 상담</a> <a href="">FAQ</a> <a href="">국비대상자
+											조회</a>
+									</div>
 									<%
 									}
 									} else {
@@ -92,8 +96,8 @@ String loginID = (String) session.getAttribute("loginID");
 												<a href="">OTT프로젝트</a> <a href="">Javflix 비전</a> <a href="">OTT신청</a>
 											</div>
 											<div class="boardHide" id="board5">
-												<a href="ottUser.jsp">OTT정보</a> <a href="" onclick="noAccess()">OTT후기</a>
-												<a href=""></a>
+												<a href="ottUser.jsp">OTT정보</a> <a href=""
+													onclick="noAccess()">OTT후기</a> <a href=""></a>
 											</div>
 											<div class="boardHide" id="board6">
 												<a href="">기술자문의원</a> <a href="">OTT특강</a> <a href="">실무자인터뷰</a>
@@ -102,13 +106,13 @@ String loginID = (String) session.getAttribute("loginID");
 												<a href="login.jsp">로그인</a> <a href="signup.jsp">회원가입</a> <a
 													href="">건의게시판</a>
 											</div>
-											<%
-											}
-											%>
 											<div class="boardHide" id="board8">
 												<a href="">온라인 상담</a> <a href="">FAQ</a> <a href="">국비대상자
 													조회</a>
 											</div>
+											<%
+											}
+											%>
 										</div>
 									</div>
 								</div>
